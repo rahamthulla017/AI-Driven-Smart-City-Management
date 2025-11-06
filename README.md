@@ -34,6 +34,7 @@ ai_smart_city_python_team/
 ├── requirements.txt             # Python dependencies
 └── README.md                    # This documentation
 
+
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
 git clone https://github.com/<your-repo>/ai_smart_city_python_team.git
