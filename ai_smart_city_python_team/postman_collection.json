@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "AI Smart City - Python Team (Postman)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Gateway - root",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{gateway}}/",
+          "host": [
+            "{{gateway}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ingestion - health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{gateway}}/proxy/ingestion/health",
+          "host": [
+            "{{gateway}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Model - predict",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\":[1,2,3]}"
+        },
+        "url": {
+          "raw": "{{gateway}}/proxy/model/predict",
+          "host": [
+            "{{gateway}}"
+          ]
+        }
+      }
+    }
+  ]
+}

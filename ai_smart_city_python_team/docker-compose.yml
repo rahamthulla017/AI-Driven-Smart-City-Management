@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  api-gateway:
+    build: ./api_gateway
+    container_name: api-gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - py1_ingestion
+      - py2_feature_engineer
+      - py3_model_serving
+      - py4_automation
+
+  py1_ingestion:
+    build: ./py1_ingestion
+    container_name: py1_ingestion
+    ports:
+      - "8001:8000"
+
+  py2_feature_engineer:
+    build: ./py2_feature_engineer
+    container_name: py2_feature_engineer
+    ports:
+      - "8002:8000"
+
+  py3_model_serving:
+    build: ./py3_model_serving
+    container_name: py3_model_serving
+    ports:
+      - "8003:8000"
+
+  py4_automation:
+    build: ./py4_automation
+    container_name: py4_automation
+    ports:
+      - "8004:8000"

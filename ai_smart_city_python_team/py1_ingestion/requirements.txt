@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic
+httpx
+aiofiles
+python-multipart
+redis
+boto3
+numpy
+pandas
+scikit-learn
